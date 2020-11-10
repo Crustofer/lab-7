@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+background-color: #92C7C7;
+}
+
+h1{
+color: white;
+text-align: center;
+}
+
+button{
+	background-color: orange;
+	color: black;
+	font: italic bold 20px arial,serif;
+	text-align: right;
+	font-size: 16px;
+}
+
+h2{
+color: white;
+}
+
+p1{
+font-family: arial;
+font-size: 20px;
+}
+
+p2{
+font-family: arial;
+font-size: 20px;
+}
+
+p3{
+font-family: arial;
+font-size: 20px;
+}
+
+table {
+background-color: white;
+font-family: arial;
+}
+
+ul {
+background-color: white;
+font-family: arial;
+}
+
+table, tr, td, ul {border: 2px solid black;}
+
+p3{
+font-family: arial;
+font-size: 20px;
+}
+
+</style>
+<script>
+function stilnou()
+{
+	document.body.style.backgroundColor = "#5363d5";
+	
+	document.getElementById("numeprofil").innerHTML = "Student la facultatea de electronica - Chiriac Cristian";
+	document.getElementById("numeprofil").style.color = "orange";
+	
+	document.getElementById("poza").src = "miti.jpg"
+	document.getElementById("poza").style.opacity = "0.5"
+	document.getElementById("poza").style.border = "6px"
+	
+	document.getElementById("date").style.color = "orange";
+	document.getElementById("date").innerHTML = "Informatii generale";
+	document.getElementById("informatii").innerHTML = "Locul nasterii: Sibiu<br>Inaltime: 1.87 m<br>Grupa de sange: B";
+	document.getElementById("informatii").style.font = "italic bold 20px arial,serif";
+	
+	document.getElementById("ed").style.color = "orange";
+	document.getElementById("tabel").style.backgroundColor = "orange";
+	document.getElementById("tabel").style.font = "italic bold 20px arial,serif";
+	
+	document.getElementById("discipline").style.color = "orange";
+	document.getElementById("materii").style.font = "italic bold 20px arial,serif";
+	
+	document.getElementById("hoby").style.color = "orange";
+	document.getElementById("lista").style.backgroundColor = "orange";
+	document.getElementById("lista").style.font = "italic bold 20px arial,serif";
+	
+	document.getElementById("inapoi").style.color = "orange";
+}
+function calculVarsta()
+{
+	var anCurent = new Date;
+	var varstaMea;
+	
+	var anNasc = document.getElementById("varsta").innerHTML;
+
+	varstaMea = anCurent.getFullYear() - parseInt(anNasc);
+	document.getElementById("varsta").innerHTML = varstaMea;
+
+}
+
+</script>
+</head>
+
+<body>
+
+<h1 id="numeprofil">Chiriac Cristian</h1>
+
+<button onclick="stilnou()">Schimba stil!</button>
+
+
+<img id="poza" src="cristi.jpg" alt="poza personala" style="width:800px;height:600px;">
+
+<h2 id="date">Date de contact</h2>
+
+<p1 id = "informatii">Email: chiriac.cristian.01@gmail.com<br>Telefon: 07xx xxx xxx<br></p1>
+
+<p3>Anul Nasterii:</p3>
+<p onmouseover = "calculVarsta()" id = "varsta">2001</p>
+
+<h2 id="ed">Educatie</h2>
+<table id ="tabel">
+<tr><td>Liceu</td><td>Ani de studiu</td><td>Diploma</td></tr>
+<tr><td>LTCN Sibiu</td><td>2016-2020</td><td>Bacalaureat</td></tr>
+</table>
+<br>
+
+<h2 id="discipline">Discipline pe care doresc sa le aprofundez </h2>
+<p3 id = "materii">
+Programarea calculatoarelor - algoritmi (AN I) <a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/11.pdf">Link pagina</a><br>
+Microprocesoare (AN III) <a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/33.pdf">Link pagina</a><br>
+Teoria informatiei si codarii (AN III) <a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/35.pdf">Link pagina</a>
+</p3>
+
+
+<h2 id = "hoby">Hobby-uri</h2>
+<ul id = "lista">
+<li>Jocuri Video</li>
+<li>Anime-uri</li>
+<li>Iesit la bere</li>
+<li>Ascultat muzica</li>
+<li>Cantat la chitara</li>
+</ul>
+
+<h2 id = "inapoi">Inapoi <a href="file:///C:/Users/Iamma/Desktop/agenda%20html/agenda.html">Link pagina</a> 
+
+</body>
+</html>
